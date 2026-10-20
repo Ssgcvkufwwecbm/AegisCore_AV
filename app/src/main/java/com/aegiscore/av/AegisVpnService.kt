@@ -128,7 +128,7 @@ class AegisVpnService : VpnService() {
     private fun startShield() {
         upstreams = discoverUpstreams()
         val pfd = try {
-            VpnService.Builder()
+            Builder()
                 .setSession("AegisCore Shield")
                 .setMtu(1500)
                 .addAddress(VPN_ADDR, 24)
